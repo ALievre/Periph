@@ -1,4 +1,4 @@
-nucleo-f103rb\system_stm32f1xx.o: ../Src/system_stm32f1xx.c
+nucleo-f103rb\system_stm32f1xx.o: ..\Application\system_stm32f1xx.c
 nucleo-f103rb\system_stm32f1xx.o: ..\Inc\stm32f1xx.h
 nucleo-f103rb\system_stm32f1xx.o: ..\Inc\stm32f103xb.h
 nucleo-f103rb\system_stm32f1xx.o: C:\Users\gagat\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h

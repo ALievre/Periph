@@ -385,7 +385,7 @@
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../Src/main.c</FilePath>
+              <FilePath>../Application/main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -395,7 +395,7 @@
             <File>
               <FileName>Voilier.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Voilier.c</FilePath>
+              <FilePath>../Services/Voilier.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -403,32 +403,64 @@
           <GroupName>User Peripheral</GroupName>
           <Files>
             <File>
-              <FileName>Voiles.c</FileName>
+              <FileName>Batterie.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Voiles.c</FilePath>
+              <FilePath>..\Peripheral\Batterie.c</FilePath>
             </File>
             <File>
-              <FileName>Vent.c</FileName>
+              <FileName>Plateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Vent.c</FilePath>
+              <FilePath>..\Peripheral\Plateau.c</FilePath>
+            </File>
+            <File>
+              <FileName>Pupitre.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral\Pupitre.c</FilePath>
             </File>
             <File>
               <FileName>Roulis.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Roulis.c</FilePath>
+              <FilePath>..\Peripheral\Roulis.c</FilePath>
+            </File>
+            <File>
+              <FileName>Télécommande.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral\Télécommande.c</FilePath>
+            </File>
+            <File>
+              <FileName>Vent.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral\Vent.c</FilePath>
+            </File>
+            <File>
+              <FileName>Voiles.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral\Voiles.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>User Fonction</GroupName>
-        </Group>
-        <Group>
-          <GroupName>MyDrivers</GroupName>
           <Files>
             <File>
               <FileName>ADC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\ADC.c</FilePath>
+              <FilePath>..\Fonction\ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Fonction\GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Fonction\Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Fonction\UART.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -473,7 +505,7 @@
             <File>
               <FileName>system_stm32f1xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../Src/system_stm32f1xx.c</FilePath>
+              <FilePath>..\Application\system_stm32f1xx.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -871,7 +903,7 @@
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../Src/main.c</FilePath>
+              <FilePath>../Application/main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -881,7 +913,7 @@
             <File>
               <FileName>Voilier.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Voilier.c</FilePath>
+              <FilePath>../Services/Voilier.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -889,32 +921,64 @@
           <GroupName>User Peripheral</GroupName>
           <Files>
             <File>
-              <FileName>Voiles.c</FileName>
+              <FileName>Batterie.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Voiles.c</FilePath>
+              <FilePath>..\Peripheral\Batterie.c</FilePath>
             </File>
             <File>
-              <FileName>Vent.c</FileName>
+              <FileName>Plateau.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Vent.c</FilePath>
+              <FilePath>..\Peripheral\Plateau.c</FilePath>
+            </File>
+            <File>
+              <FileName>Pupitre.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral\Pupitre.c</FilePath>
             </File>
             <File>
               <FileName>Roulis.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Roulis.c</FilePath>
+              <FilePath>..\Peripheral\Roulis.c</FilePath>
+            </File>
+            <File>
+              <FileName>Télécommande.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral\Télécommande.c</FilePath>
+            </File>
+            <File>
+              <FileName>Vent.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral\Vent.c</FilePath>
+            </File>
+            <File>
+              <FileName>Voiles.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral\Voiles.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>User Fonction</GroupName>
-        </Group>
-        <Group>
-          <GroupName>MyDrivers</GroupName>
           <Files>
             <File>
               <FileName>ADC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\ADC.c</FilePath>
+              <FilePath>..\Fonction\ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Fonction\GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Fonction\Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Fonction\UART.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -959,7 +1023,7 @@
             <File>
               <FileName>system_stm32f1xx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../Src/system_stm32f1xx.c</FilePath>
+              <FilePath>..\Application\system_stm32f1xx.c</FilePath>
             </File>
           </Files>
         </Group>
