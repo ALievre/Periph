@@ -22,8 +22,6 @@
 #include "stm32f1xx_ll_usart.h"
 #include "stm32f1xx_ll_tim.h"
 
-#include "Chrono.h"
-
 void  SystemClock_Config(void);
 
 /* Private functions ---------------------------------------------------------*/
@@ -41,11 +39,11 @@ int main(void)
   SystemClock_Config();
 	
 	//Configuration de l'usart
-	Usarts_Conf(USART2);
+	//Usarts_Conf(USART2);
 
   /* Add your application code here */
   // Configuration chronomètre
-	Chrono_Conf(TIM3);
+	//Chrono_Conf(TIM3);
 	
 	// Lancement chronomètre
 	//Chrono_Start(); 
@@ -53,7 +51,7 @@ int main(void)
   //Infinite loop
   while(1)
   {
-		Chrono_Background();
+		//Chrono_Background();
 		
 		/*
 		//Attente du transfert de donnée

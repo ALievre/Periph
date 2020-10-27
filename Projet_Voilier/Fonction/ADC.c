@@ -5,21 +5,38 @@
 #include "stm32f1xx_ll_rcc.h"
 
 
+//Roulis : PC0 et PC1 et Batterie : PC2, IN10/11/12
 
-
-void ADC_Conf(ADC_TypeDef *ADC){
+void ADC_Conf(void){
 
 	//Start la clock
-	if (ADC==ADC1) LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_ADC1);
-	else if (ADC==ADC2) LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_ADC2);
+	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_ADC1);
+	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_ADC2);
 	
 	//PC0 : X et PC1 : Y
-	//Config PC0 et PC1 en analog input
+	//Config PC0, PC1 et PC2 en analog input
 	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOC);
 	LL_GPIO_SetPinMode(GPIOC, LL_GPIO_PIN_0, LL_GPIO_MODE_ANALOG);
 	LL_GPIO_SetPinMode(GPIOC, LL_GPIO_PIN_1, LL_GPIO_MODE_ANALOG);
+	LL_GPIO_SetPinMode(GPIOC, LL_GPIO_PIN_2, LL_GPIO_MODE_ANALOG);
 
 	//Div la freq de la clock d'ADC par 6
 	LL_RCC_SetADCClockSource(LL_RCC_ADC_CLKSRC_PCLK2_DIV_6);
+
+}
+
+void ADC_Start(void){
+
+	//Enable les ADC
+	LL_ADC_Enable(ADC1);
+	LL_ADC_Enable(ADC2);
+
+}
+
+void ADC_Stop(void){
+
+	//Enable les ADC
+	LL_ADC_Disable(ADC1);
+	LL_ADC_Disable(ADC2);
 
 }

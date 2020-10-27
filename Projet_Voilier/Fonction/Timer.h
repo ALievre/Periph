@@ -13,4 +13,8 @@ Driver pour Timer 1 à 4 du STM32F103RB
 	*					int Psc   : valeur à placer dans PSC
   * @retval None
   */
-void Timer_Conf(TIM_TypeDef * Timer,int Arr, int Psc);
+void Timer_Conf(void);
+
+void Timer_Start(TIM_TypeDef * Timer);
+
+void Timer_Stop(TIM_TypeDef * Timer);

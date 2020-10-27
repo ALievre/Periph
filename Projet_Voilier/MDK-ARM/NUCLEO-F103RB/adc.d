@@ -10,3 +10,5 @@ nucleo-f103rb\adc.o: C:\Users\gagat\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSI
 nucleo-f103rb\adc.o: C:\Users\gagat\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h
 nucleo-f103rb\adc.o: ..\Inc\system_stm32f1xx.h
 nucleo-f103rb\adc.o: ..\LLDrivers\inc\stm32f1xx_ll_gpio.h
+nucleo-f103rb\adc.o: ..\LLDrivers\inc\stm32f1xx_ll_adc.h
+nucleo-f103rb\adc.o: ..\LLDrivers\inc\stm32f1xx_ll_rcc.h
