@@ -14,14 +14,9 @@ void USART_Conf(void){
 	
 	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOA);
 		
-	LL_GPIO_SetPinMode(GPIOA, LL_GPIO_PIN_9, LL_GPIO_MODE_ALTERNATE);
-	LL_GPIO_SetPinOutputType(GPIOA, LL_GPIO_PIN_9, LL_GPIO_OUTPUT_PUSHPULL);
-	
-	LL_GPIO_SetPinMode(GPIOA, LL_GPIO_PIN_11, LL_GPIO_MODE_ALTERNATE);
-	LL_GPIO_SetPinOutputType(GPIOA, LL_GPIO_PIN_11, LL_GPIO_OUTPUT_PUSHPULL);
 	
 	//Initialise Tx enable à 0
-	LL_USART_DisableCTSHWFlowCtrl(USART1)
+	LL_USART_DisableCTSHWFlowCtrl(USART1);
 	
 	//Initialise les config
 	LL_USART_InitTypeDef USART_InitConf;

@@ -21,10 +21,6 @@ void Timer_Conf(void)
 	LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_TIM4);
 	
 	//TIM1CH1 en PWM Output
-	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOA);
-	LL_GPIO_SetPinMode(GPIOA, LL_GPIO_PIN_8, LL_GPIO_MODE_ALTERNATE);
-	LL_GPIO_SetPinOutputType(GPIOA, LL_GPIO_PIN_8, LL_GPIO_OUTPUT_PUSHPULL);
-	
 			//Conf de l'ARR et du PSC
 	My_LL_Tim_Init_Struct.Autoreload=1799;
 	My_LL_Tim_Init_Struct.Prescaler=99;
@@ -32,20 +28,14 @@ void Timer_Conf(void)
 	My_LL_Tim_Init_Struct.CounterMode=LL_TIM_COUNTERMODE_UP;
 	My_LL_Tim_Init_Struct.RepetitionCounter=0;
 	LL_TIM_Init(TIM1,&My_LL_Tim_Init_Struct);
-	
 			//Conf du CCR1
 	LL_TIM_OC_SetCompareCH1(TIM1, 89);
-			
 			//Mode PWM1
 	LL_TIM_OC_SetMode(TIM1, LL_TIM_CHANNEL_CH1, LL_TIM_OCMODE_PWM1);
-			
 			//Activation bit MOE
 	LL_TIM_EnableAllOutputs(TIM1);	
 	
 	//TIM2 en PWM Output
-	LL_GPIO_SetPinMode(GPIOA, LL_GPIO_PIN_1, LL_GPIO_MODE_ALTERNATE);
-	LL_GPIO_SetPinOutputType(GPIOA, LL_GPIO_PIN_1, LL_GPIO_OUTPUT_PUSHPULL);
-	
 			//Conf de l'ARR et du PSC
 	My_LL_Tim_Init_Struct.Autoreload=179;
 	My_LL_Tim_Init_Struct.Prescaler=9;
@@ -53,18 +43,13 @@ void Timer_Conf(void)
 	My_LL_Tim_Init_Struct.CounterMode=LL_TIM_COUNTERMODE_UP;
 	My_LL_Tim_Init_Struct.RepetitionCounter=0;
 	LL_TIM_Init(TIM2,&My_LL_Tim_Init_Struct);
-	
 			//Conf du CCR1
 	LL_TIM_OC_SetCompareCH2(TIM2, 1);
-			
 			//Mode PWM1
 	LL_TIM_OC_SetMode(TIM2, LL_TIM_CHANNEL_CH2, LL_TIM_OCMODE_PWM1);	
 	
 	//TIM3 en mode Encoder Interface
 	LL_TIM_SetEncoderMode(TIM3, LL_TIM_ENCODERMODE_X4_TI12);
-	LL_GPIO_SetPinMode(GPIOA, LL_GPIO_PIN_6, LL_GPIO_MODE_FLOATING);
-	LL_GPIO_SetPinMode(GPIOA, LL_GPIO_PIN_7, LL_GPIO_MODE_FLOATING);
-
 			//Conf de l'ARR et du PSC
 	My_LL_Tim_Init_Struct.Autoreload=1799;
 	My_LL_Tim_Init_Struct.Prescaler=99;
@@ -74,17 +59,7 @@ void Timer_Conf(void)
 	LL_TIM_Init(TIM3,&My_LL_Tim_Init_Struct);
 	
 	//TIM4 en PWM Input
-	LL_GPIO_SetPinMode(GPIOB, LL_GPIO_PIN_6, LL_GPIO_MODE_FLOATING);
-	LL_GPIO_SetPinMode(GPIOB, LL_GPIO_PIN_7, LL_GPIO_MODE_FLOATING);
 
-	
-
-	// Blocage IT
-	//LL_TIM_DisableIT_UPDATE(Timer);
-	
-	
-	// Blocage Timer
-	//LL_TIM_DisableCounter(Timer);
 	
 }
 
