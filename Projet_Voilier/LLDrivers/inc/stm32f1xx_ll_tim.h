@@ -1583,7 +1583,8 @@ __STATIC_INLINE void LL_TIM_OC_ConfigOutput(TIM_TypeDef *TIMx, uint32_t Channel,
   *         @arg @ref LL_TIM_CHANNEL_CH4
   * @param  Mode This parameter can be one of the following values:
   *         @arg @ref LL_TIM_OCMODE_FROZEN
-  *         @arg @ref LL_TIM_OCMODE_ACTIVE
+  *         @arg @ref 
+
   *         @arg @ref LL_TIM_OCMODE_INACTIVE
   *         @arg @ref LL_TIM_OCMODE_TOGGLE
   *         @arg @ref LL_TIM_OCMODE_FORCED_INACTIVE

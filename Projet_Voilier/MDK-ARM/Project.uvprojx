@@ -423,11 +423,6 @@
               <FilePath>..\Peripheral\Roulis.c</FilePath>
             </File>
             <File>
-              <FileName>Télécommande.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Peripheral\Télécommande.c</FilePath>
-            </File>
-            <File>
               <FileName>Vent.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Peripheral\Vent.c</FilePath>
@@ -436,6 +431,11 @@
               <FileName>Voiles.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Peripheral\Voiles.c</FilePath>
+            </File>
+            <File>
+              <FileName>Telecommande.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral\Telecommande.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -941,11 +941,6 @@
               <FilePath>..\Peripheral\Roulis.c</FilePath>
             </File>
             <File>
-              <FileName>Télécommande.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Peripheral\Télécommande.c</FilePath>
-            </File>
-            <File>
               <FileName>Vent.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Peripheral\Vent.c</FilePath>
@@ -954,6 +949,11 @@
               <FileName>Voiles.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Peripheral\Voiles.c</FilePath>
+            </File>
+            <File>
+              <FileName>Telecommande.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripheral\Telecommande.c</FilePath>
             </File>
           </Files>
         </Group>

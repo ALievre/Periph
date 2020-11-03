@@ -61,7 +61,7 @@ void Timer_Conf(void)
 	//TIM4 en PWM Input
 
 		//Conf de l'ARR et du PSC
-	My_LL_Tim_Init_Struct.Autoreload=99999;
+	My_LL_Tim_Init_Struct.Autoreload=3599;
 	My_LL_Tim_Init_Struct.Prescaler=9;
 	My_LL_Tim_Init_Struct.ClockDivision=LL_TIM_CLOCKDIVISION_DIV1;
 	My_LL_Tim_Init_Struct.CounterMode=LL_TIM_COUNTERMODE_UP;

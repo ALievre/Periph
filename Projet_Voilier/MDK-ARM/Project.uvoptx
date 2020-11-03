@@ -75,7 +75,7 @@
       <OPTFL>
         <tvExp>1</tvExp>
         <tvExpOptDlg>0</tvExpOptDlg>
-        <IsCurrentTarget>1</IsCurrentTarget>
+        <IsCurrentTarget>0</IsCurrentTarget>
       </OPTFL>
       <CpuCode>18</CpuCode>
       <DebugOpt>
@@ -297,7 +297,7 @@
       <OPTFL>
         <tvExp>1</tvExp>
         <tvExpOptDlg>0</tvExpOptDlg>
-        <IsCurrentTarget>0</IsCurrentTarget>
+        <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
       <CpuCode>18</CpuCode>
       <DebugOpt>
@@ -576,8 +576,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Peripheral\Télécommande.c</PathWithFileName>
-      <FilenameWithoutPath>Télécommande.c</FilenameWithoutPath>
+      <PathWithFileName>..\Peripheral\Vent.c</PathWithFileName>
+      <FilenameWithoutPath>Vent.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -588,8 +588,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Peripheral\Vent.c</PathWithFileName>
-      <FilenameWithoutPath>Vent.c</FilenameWithoutPath>
+      <PathWithFileName>..\Peripheral\Voiles.c</PathWithFileName>
+      <FilenameWithoutPath>Voiles.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -600,8 +600,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\Peripheral\Voiles.c</PathWithFileName>
-      <FilenameWithoutPath>Voiles.c</FilenameWithoutPath>
+      <PathWithFileName>..\Peripheral\Telecommande.c</PathWithFileName>
+      <FilenameWithoutPath>Telecommande.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -697,7 +697,7 @@
       <GroupNumber>5</GroupNumber>
       <FileNumber>16</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\LLDrivers\src\stm32f1xx_ll_tim.c</PathWithFileName>
