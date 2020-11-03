@@ -10,7 +10,9 @@ void GPIO_Conf(void){
 
 	//Start clock
 	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOA);
+	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOB);
 	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOC);
+	
 	
 	//Girouette
 	LL_GPIO_SetPinMode(GPIOA, LL_GPIO_PIN_5, LL_GPIO_MODE_FLOATING);

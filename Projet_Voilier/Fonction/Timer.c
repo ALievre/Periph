@@ -51,14 +51,48 @@ void Timer_Conf(void)
 	//TIM3 en mode Encoder Interface
 	LL_TIM_SetEncoderMode(TIM3, LL_TIM_ENCODERMODE_X4_TI12);
 			//Conf de l'ARR et du PSC
-	My_LL_Tim_Init_Struct.Autoreload=1799;
-	My_LL_Tim_Init_Struct.Prescaler=99;
+	My_LL_Tim_Init_Struct.Autoreload=359;
+	My_LL_Tim_Init_Struct.Prescaler=0;
 	My_LL_Tim_Init_Struct.ClockDivision=LL_TIM_CLOCKDIVISION_DIV1;
 	My_LL_Tim_Init_Struct.CounterMode=LL_TIM_COUNTERMODE_UP;
 	My_LL_Tim_Init_Struct.RepetitionCounter=0;
 	LL_TIM_Init(TIM3,&My_LL_Tim_Init_Struct);
 	
 	//TIM4 en PWM Input
+
+		//Conf de l'ARR et du PSC
+	My_LL_Tim_Init_Struct.Autoreload=99999;
+	My_LL_Tim_Init_Struct.Prescaler=9;
+	My_LL_Tim_Init_Struct.ClockDivision=LL_TIM_CLOCKDIVISION_DIV1;
+	My_LL_Tim_Init_Struct.CounterMode=LL_TIM_COUNTERMODE_UP;
+	My_LL_Tim_Init_Struct.RepetitionCounter=0;
+	LL_TIM_Init(TIM4,&My_LL_Tim_Init_Struct);
+	
+		// Conf du CCR1 et CCR2 en mode active input
+	LL_TIM_IC_Config(TIM4,LL_TIM_CHANNEL_CH1,LL_TIM_ACTIVEINPUT_TRC);
+	LL_TIM_IC_Config(TIM4,LL_TIM_CHANNEL_CH2,LL_TIM_ACTIVEINPUT_TRC);
+	
+		//Config du active polarity du TI1FP1 et TI1FP2
+	LL_TIM_IC_SetPolarity(TIM4,LL_TIM_CHANNEL_CH1,LL_TIM_IC_POLARITY_RISING);
+	LL_TIM_IC_SetPolarity(TIM4,LL_TIM_CHANNEL_CH2,LL_TIM_IC_POLARITY_RISING);
+	
+		// Trigger input pour TI1FP1
+	LL_TIM_SetTriggerInput(TIM4,LL_TIM_TS_TI1FP1);
+	
+		// activation mode master/slave
+	LL_TIM_EnableMasterSlaveMode(TIM4);
+	
+		// mode slave reset pour timer 4
+	LL_TIM_SetSlaveMode(TIM4,LL_TIM_SLAVEMODE_RESET);
+	
+		// enable le capture de ccr1 et ccr2
+	LL_TIM_CC_EnableChannel(TIM4,LL_TIM_CHANNEL_CH1);
+	LL_TIM_CC_EnableChannel(TIM4,LL_TIM_CHANNEL_CH2);
+		
+	
+	
+	
+	
 
 	
 }
