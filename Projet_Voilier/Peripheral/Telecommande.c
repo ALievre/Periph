@@ -2,10 +2,10 @@
 #include "stm32f1xx_ll_tim.h"
 
 
-int DV_telecom(void){
+float DV_telecom(void){
 	
-	int direction;
-	int duty_cycle;
+	float direction;
+	float duty_cycle;
 	
 	//duty cycle= CCR1/CCR2
 	duty_cycle=LL_TIM_IC_GetCaptureCH1(TIM4)/LL_TIM_IC_GetCaptureCH2(TIM4);

@@ -1,2 +1,2 @@
 
-int DV_telecom(void);
+float DV_telecom(void);

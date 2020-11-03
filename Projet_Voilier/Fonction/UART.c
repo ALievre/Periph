@@ -10,10 +10,7 @@
 void USART_Conf(void){
 	
 	//Start clock
-	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_USART1);
-	
-	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_GPIOA);
-		
+	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_USART1);		
 	
 	//Initialise Tx enable à 0
 	LL_USART_DisableCTSHWFlowCtrl(USART1);

@@ -22,6 +22,11 @@
 #include "stm32f1xx_ll_usart.h"
 #include "stm32f1xx_ll_tim.h"
 
+#include "ADC.h"
+#include "GPIO.h"
+#include "Timer.h"
+#include "UART.h"
+
 void  SystemClock_Config(void);
 
 /* Private functions ---------------------------------------------------------*/
@@ -38,27 +43,16 @@ int main(void)
   /* Configure the system clock to 72 MHz */
   SystemClock_Config();
 	
-	//Configuration de l'usart
-	//Usarts_Conf(USART2);
-
-  /* Add your application code here */
-  // Configuration chronomètre
-	//Chrono_Conf(TIM3);
+	ADC_Conf();
+	GPIO_Conf();
+	Timer_Conf();
+	USART_Conf();
 	
-	// Lancement chronomètre
-	//Chrono_Start(); 
   
   //Infinite loop
   while(1)
   {
-		//Chrono_Background();
 		
-		/*
-		//Attente du transfert de donnée
-		while(LL_USART_IsActiveFlag_TXE(USART2) == 0){
-			//Envoie données
-			LL_USART_TransmitData8(USART2, 0x35);
-		}*/
   }
 	
 	

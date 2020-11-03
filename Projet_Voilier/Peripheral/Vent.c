@@ -5,6 +5,7 @@
 int Activation_Girouette(void){
 
 	return LL_GPIO_ReadInputPort(GPIOA);
+	//A FAIRE POLLING IDR REMET COMPTEUR A 0
 
 }
 
