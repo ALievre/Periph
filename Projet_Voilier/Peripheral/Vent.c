@@ -2,11 +2,14 @@
 #include "stm32f1xx_ll_tim.h"
 #include "stm32f1xx_ll_gpio.h"
 
-int Activation_Girouette(void){
-
-	return LL_GPIO_ReadInputPort(GPIOA);
-	//A FAIRE POLLING IDR REMET COMPTEUR A 0
-
+//Polling de l'IDR, à faire en background
+void Index_Girouette(void){
+	
+	if(LL_GPIO_ReadInputPort(GPIOA)){
+	
+			LL_TIM_SetCounter(TIM3, 0);
+		
+	}
 }
 
 int Direction_Vent(void){
