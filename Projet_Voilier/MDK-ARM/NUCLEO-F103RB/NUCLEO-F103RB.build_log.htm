@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.29.0.0
 Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Agathe LIEVRE, INSA, LIC=----
+License Information: assia Windows, HP Inc., LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.29.0.0
@@ -21,16 +21,12 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
 Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
-D:\INSA\4A\Peripheriques\Git\Periph\Projet_Voilier\MDK-ARM\Project.uvprojx
+C:\Users\nguye\Documents\Periph\Projet_Voilier\MDK-ARM\Project.uvprojx
 Project File Date:  11/03/2020
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'Simulateur'
-compiling Batterie.c...
-compiling Voilier.c...
-compiling Pupitre.c...
-compiling Roulis.c...
 compiling main.c...
 ../Application/ADC.h(5): warning:  #1-D: last line of file ends without a newline
   void ADC_Stop(void);
@@ -41,27 +37,31 @@ compiling main.c...
 ../Application/UART.h(3): warning:  #1-D: last line of file ends without a newline
   void GPIO_Conf(void);
 ../Application/main.c(49): warning:  #223-D: function "USART_Conf" declared implicitly
-  	USART_Conf();
+        USART_Conf();
 ../Application/main.c: 5 warnings, 0 errors
+compiling Voilier.c...
+compiling Batterie.c...
 compiling Plateau.c...
 ..\Peripheral\Plateau.h(1): warning:  #1-D: last line of file ends without a newline
   void Controle_Moteur_cc(float Direction);
 ..\Peripheral\Plateau.c(30): warning:  #1-D: last line of file ends without a newline
   }
 ..\Peripheral\Plateau.c: 2 warnings, 0 errors
+compiling Pupitre.c...
+compiling Roulis.c...
 compiling Vent.c...
 ..\Peripheral\Vent.h(5): warning:  #1-D: last line of file ends without a newline
   int Direction_Vent(void);
-..\Peripheral\Vent.c(16): warning:  #1-D: last line of file ends without a newline
+..\Peripheral\Vent.c(19): warning:  #1-D: last line of file ends without a newline
   }
 ..\Peripheral\Vent.c: 2 warnings, 0 errors
-compiling Telecommande.c...
 compiling Voiles.c...
 ..\Peripheral\Voiles.h(6): warning:  #1-D: last line of file ends without a newline
   void Controle_Servomoteur(int Angle_Servo);
 ..\Peripheral\Voiles.c(34): warning:  #1-D: last line of file ends without a newline
   }
 ..\Peripheral\Voiles.c: 2 warnings, 0 errors
+compiling Telecommande.c...
 compiling ADC.c...
 ..\Fonction\ADC.h(5): warning:  #1-D: last line of file ends without a newline
   void ADC_Stop(void);
@@ -78,7 +78,7 @@ compiling Timer.c...
 ..\Fonction\Timer.h(20): warning:  #1-D: last line of file ends without a newline
   void Timer_Stop(TIM_TypeDef * Timer);
 ..\Fonction\Timer.c(15): warning:  #177-D: variable "My_TIM_BDTRInitStruct"  was declared but never referenced
-  	LL_TIM_BDTR_InitTypeDef My_TIM_BDTRInitStruct;
+        LL_TIM_BDTR_InitTypeDef My_TIM_BDTRInitStruct;
 ..\Fonction\Timer.c(97): warning:  #1-D: last line of file ends without a newline
   }
 ..\Fonction\Timer.c: 3 warnings, 0 errors
@@ -91,9 +91,9 @@ compiling UART.c...
 compiling stm32f1xx_ll_rcc.c...
 compiling stm32f1xx_ll_utils.c...
 compiling stm32f1xx_ll_tim.c...
-assembling startup_stm32f103xb.s...
-compiling system_stm32f1xx.c...
 compiling stm32f1xx_ll_usart.c...
+compiling system_stm32f1xx.c...
+assembling startup_stm32f103xb.s...
 linking...
 Program Size: Code=2998 RO-data=330 RW-data=4 ZI-data=1028  
 "NUCLEO-F103RB\NUCLEO-F103RB.axf" - 0 Error(s), 20 Warning(s).
@@ -113,13 +113,13 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\_Simulateur
-  C:\Users\gagat\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
-  C:\Users\gagat\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+  C:\Users\nguye\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
+  C:\Users\nguye\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.3.0
-Build Time Elapsed:  00:00:17
+Build Time Elapsed:  00:00:49
 </pre>
 </body>
 </html>
