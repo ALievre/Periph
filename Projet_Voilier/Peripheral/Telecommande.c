@@ -2,7 +2,7 @@
 #include "stm32f1xx_ll_tim.h"
 
 
-float DV_telecom(void){
+float Get_Direction(void){
 	
 	float direction;
 	float duty_cycle;

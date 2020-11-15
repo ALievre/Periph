@@ -1,2 +1,1 @@
-
-float DV_telecom(void);
+float Get_Direction(void);

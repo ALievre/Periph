@@ -1,8 +1,3 @@
-/*
-Driver pour Timer 1 à 4 du STM32F103RB
-
-*/
-
 #include "stm32f103xb.h" 
 
 /**

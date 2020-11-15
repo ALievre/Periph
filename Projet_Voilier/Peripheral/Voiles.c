@@ -16,19 +16,22 @@ int Direction_Voiles(int Angle_Girouette){
 	
 }
 
-void Controle_Servomoteur(int Angle_Voiles){
+void Controle_Servomoteur(int Angle_Voiles, int Angle_Limite){
 
 	int Angle_Servo, ARR_new;
-	
-	if (Angle_Voiles == 0) LL_TIM_SetAutoReload(TIM1, 134);
-	else if (Angle_Voiles == 90) LL_TIM_SetAutoReload(TIM1, 89);
-	else if (Angle_Voiles == -89) LL_TIM_SetAutoReload(TIM1, 179);
-	else{
+	if (Angle_Limite){
+		LL_TIM_SetAutoReload(TIM1, 89);
+	} else {
+		if (Angle_Voiles == 0) LL_TIM_SetAutoReload(TIM1, 134);
+		else if (Angle_Voiles == 90) LL_TIM_SetAutoReload(TIM1, 89);
+		else if (Angle_Voiles == -89) LL_TIM_SetAutoReload(TIM1, 179);
+		else{
+			
+			Angle_Servo = 90 - Angle_Voiles;
+			ARR_new = ((0.02*(0.05+(Angle_Servo*0.000281))*9000000)/100) - 1;
+			LL_TIM_SetAutoReload(TIM1, ARR_new);
 		
-		Angle_Servo = 90 - Angle_Voiles;
-		ARR_new = ((0.02*(0.05+(Angle_Servo*0.000281))*9000000)/100) - 1;
-		LL_TIM_SetAutoReload(TIM1, ARR_new);
-	
-	} 	
+		} 	
+	}
 
 }

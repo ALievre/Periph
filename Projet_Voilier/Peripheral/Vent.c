@@ -6,9 +6,7 @@
 void Index_Girouette(void){
 	
 	if(LL_GPIO_ReadInputPort(GPIOA)){
-	
 			LL_TIM_SetCounter(TIM3, 0);
-		
 	}
 }
 

@@ -19,13 +19,8 @@
 #include "stm32f1xx_ll_rcc.h" // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_utils.h"   // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
-#include "stm32f1xx_ll_usart.h"
-#include "stm32f1xx_ll_tim.h"
 
-#include "ADC.h"
-#include "GPIO.h"
-#include "Timer.h"
-#include "UART.h"
+#include "Voilier.h"
 
 void  SystemClock_Config(void);
 
@@ -42,56 +37,17 @@ int main(void)
 {
   /* Configure the system clock to 72 MHz */
   SystemClock_Config();
-	
-	ADC_Conf();
-	GPIO_Conf();
-	Timer_Conf();
-	USART_Conf();
-	
   
+	Voilier_Conf();
+	
   //Infinite loop
   while(1)
   {
-		
+		Controle_Voiles();
+		Controle_Plateau();
   }
-	
-	
-	/*
-	//Allumer la clock
-	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
-	
-	//Start conf en floating input
-	GPIOC->CRH &= ~GPIO_CRH_MODE8;
-	GPIOC->CRH |= GPIO_CRH_CNF8_0;
-	
-	//LED conf en output pushpull
-	GPIOC->CRH |= GPIO_CRH_MODE10_0;
-	GPIOC->CRH &= ~GPIO_CRH_CNF10;
-	
-	//LED conf en output open drain
-	GPIOC->CRH |= GPIO_CRH_MODE10_0;
-	GPIOC->CRH |= GPIO_CRH_CNF10_0;
-	
-	GPIOC->ODR |= GPIO_ODR_ODR10;
-	GPIOC->ODR &= ~GPIO_ODR_ODR10;
-	
-	while(1){
-		//Quand on start, la LED s'allume
-		if((GPIOC->IDR & (1<<8)) == (1<<8)){
-			GPIOC->ODR |= GPIO_ODR_ODR10;
-		} else {
-			GPIOC->ODR &= ~GPIO_ODR_ODR10;
-		}
-	}*/
-	
-	
+		
 }
-
-
-
-
-
-
 
 /**
   * @brief  System Clock Configuration
