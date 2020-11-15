@@ -487,6 +487,11 @@
               <FileType>1</FileType>
               <FilePath>..\LLDrivers\src\stm32f1xx_ll_usart.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f1xx_ll_dma.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\LLDrivers\inc\stm32f1xx_ll_dma.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1004,6 +1009,11 @@
               <FileName>stm32f1xx_ll_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LLDrivers\src\stm32f1xx_ll_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f1xx_ll_dma.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\LLDrivers\inc\stm32f1xx_ll_dma.h</FilePath>
             </File>
           </Files>
         </Group>
