@@ -22,7 +22,7 @@ Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
 D:\INSA\4A\Peripheriques\Git\Periph\Projet_Voilier\MDK-ARM\Project.uvprojx
-Project File Date:  11/15/2020
+Project File Date:  11/20/2020
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
@@ -33,6 +33,7 @@ compiling Batterie.c...
 ..\Peripheral\Batterie.c(11): warning:  #940-D: missing return statement at end of non-void function "Seuil_Batterie" 
   }
 ..\Peripheral\Batterie.c: 2 warnings, 0 errors
+compiling main.c...
 compiling Voilier.c...
 ..\Fonction\ADC.h(8): warning:  #1-D: last line of file ends without a newline
   void ADC_Stop(void);
@@ -57,7 +58,6 @@ compiling Voilier.c...
 ../Services/Voilier.c(58): warning:  #1-D: last line of file ends without a newline
   }
 ../Services/Voilier.c: 11 warnings, 0 errors
-compiling main.c...
 compiling Roulis.c...
 ..\Peripheral\Roulis.h(1): warning:  #1-D: last line of file ends without a newline
   int Angle_Limite(int * proulis);
@@ -87,7 +87,7 @@ compiling Vent.c...
 compiling Voiles.c...
 ..\Peripheral\Voiles.h(5): warning:  #1-D: last line of file ends without a newline
   void Controle_Servomoteur(int Angle_Servo, int Angle_Limite);
-..\Peripheral\Voiles.c(37): warning:  #1-D: last line of file ends without a newline
+..\Peripheral\Voiles.c(38): warning:  #1-D: last line of file ends without a newline
   }
 ..\Peripheral\Voiles.c: 2 warnings, 0 errors
 compiling Telecommande.c...
@@ -101,28 +101,28 @@ compiling GPIO.c...
 ..\Fonction\GPIO.c(50): warning:  #1-D: last line of file ends without a newline
   }
 ..\Fonction\GPIO.c: 2 warnings, 0 errors
-compiling Timer.c...
-..\Fonction\Timer.h(15): warning:  #1-D: last line of file ends without a newline
-  void Timer_Stop(TIM_TypeDef * Timer);
-..\Fonction\Timer.c(15): warning:  #177-D: variable "My_TIM_BDTRInitStruct"  was declared but never referenced
-  	LL_TIM_BDTR_InitTypeDef My_TIM_BDTRInitStruct;
-..\Fonction\Timer.c(97): warning:  #1-D: last line of file ends without a newline
-  }
-..\Fonction\Timer.c: 3 warnings, 0 errors
 compiling UART.c...
 ..\Fonction\UART.h(3): warning:  #1-D: last line of file ends without a newline
   void USART_Conf(void);
 ..\Fonction\UART.c(35): warning:  #1-D: last line of file ends without a newline
   }
 ..\Fonction\UART.c: 2 warnings, 0 errors
+compiling Timer.c...
+..\Fonction\Timer.h(15): warning:  #1-D: last line of file ends without a newline
+  void Timer_Stop(TIM_TypeDef * Timer);
+..\Fonction\Timer.c(15): warning:  #177-D: variable "My_TIM_BDTRInitStruct"  was declared but never referenced
+  	LL_TIM_BDTR_InitTypeDef My_TIM_BDTRInitStruct;
+..\Fonction\Timer.c(104): warning:  #1-D: last line of file ends without a newline
+  }
+..\Fonction\Timer.c: 3 warnings, 0 errors
 compiling stm32f1xx_ll_rcc.c...
 compiling stm32f1xx_ll_utils.c...
 compiling stm32f1xx_ll_tim.c...
-compiling stm32f1xx_ll_usart.c...
 assembling startup_stm32f103xb.s...
+compiling stm32f1xx_ll_usart.c...
 compiling system_stm32f1xx.c...
 linking...
-Program Size: Code=6126 RO-data=330 RW-data=8 ZI-data=1040  
+Program Size: Code=6222 RO-data=330 RW-data=8 ZI-data=1040  
 "NUCLEO-F103RB\NUCLEO-F103RB.axf" - 0 Error(s), 32 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -146,7 +146,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.3.0
-Build Time Elapsed:  00:00:12
+Build Time Elapsed:  00:00:15
 </pre>
 </body>
 </html>

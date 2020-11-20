@@ -7,6 +7,7 @@
 
 //Roulis : PC0 et PC1 et Batterie : PC2, IN10/11/12
 
+//Config des ADC
 void ADC_Conf(void){
 
     //Start la clock
@@ -25,6 +26,7 @@ void ADC_Conf(void){
     LL_ADC_REG_SetTriggerSource(ADC1,LL_ADC_REG_TRIG_SOFTWARE);
     LL_ADC_REG_StartConversionExtTrig(ADC1,LL_ADC_REG_TRIG_EXT_RISING);
 
+		ADC_Start();
 }
 
 void Conversion_Start(void){
@@ -36,6 +38,7 @@ void Conversion_Stop(void){
     LL_ADC_REG_StopConversionExtTrig(ADC1);
 }
 
+//Fait les conversions
 int * Conversion(int num_channel){
 
 	static int tab[3];
@@ -43,16 +46,20 @@ int * Conversion(int num_channel){
 	
     if (num_channel==0){
         LL_ADC_REG_SetSequencerRanks(ADC1,LL_ADC_REG_RANK_1,LL_ADC_CHANNEL_0);
+				Conversion_Start();
 				tab[0] = LL_ADC_REG_ReadConversionData12(ADC1);
     }
     else if (num_channel==1){
 					LL_ADC_REG_SetSequencerRanks(ADC1,LL_ADC_REG_RANK_1,LL_ADC_CHANNEL_1);
+					Conversion_Start();
 					tab[1] = LL_ADC_REG_ReadConversionData12(ADC1);
-			}
-			else if (num_channel==2){
-					LL_ADC_REG_SetSequencerRanks(ADC1,LL_ADC_REG_RANK_1,LL_ADC_CHANNEL_2);
+		}
+		else if (num_channel==2){
+				LL_ADC_REG_SetSequencerRanks(ADC1,LL_ADC_REG_RANK_1,LL_ADC_CHANNEL_2);
+				Conversion_Start();
 				tab[2] = LL_ADC_REG_ReadConversionData12(ADC1);
-			}
+		}
+			
     return ptab;
 
 }

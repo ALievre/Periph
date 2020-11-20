@@ -28,6 +28,7 @@ void Controle_Voiles(void){
 	int Tension;
 	int Voiles = Direction_Voiles(Direction_Vent());
 	
+	//Conversions des channels 10, 11, 12
 	if(Etat_Conversion == 3){
 		Tension = *Conversion(0);
 		Etat_Conversion = 1;
@@ -45,6 +46,7 @@ void Controle_Voiles(void){
 		Etat_Conversion = 1;
 	}
 	
+	//Servomoteur et voiles
 	Controle_Servomoteur(Voiles, Angle_Limite_Roulis);
 	
 	//Transmission de données vers le pupitre
