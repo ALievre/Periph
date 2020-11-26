@@ -28,19 +28,24 @@ void Controle_Voiles(void){
 	int Tension;
 	int Voiles = Direction_Voiles(Direction_Vent());
 	
+//	Index_Girouette();
+	
 	//Conversions des channels 10, 11, 12
 	if(Etat_Conversion == 3){
 		Tension = *Conversion(0);
 		Etat_Conversion = 1;
 	}
+	while(!(LL_ADC_IsActiveFlag_EOS(ADC1))){	}
 	if ((LL_ADC_IsActiveFlag_EOS(ADC1)) && (Etat_Conversion == 1)){
 		Angle_Limite_Roulis = Angle_Limite(Conversion(Etat_Conversion));
 		Etat_Conversion = 2;
 	}
+	while(!(LL_ADC_IsActiveFlag_EOS(ADC1))){	}
 	if ((LL_ADC_IsActiveFlag_EOS(ADC1)) && (Etat_Conversion == 2)){
 		Angle_Limite_Roulis = Angle_Limite(Conversion(Etat_Conversion));
 		Etat_Conversion = 0;
 	}
+	while(!(LL_ADC_IsActiveFlag_EOS(ADC1))){	}
 	if ((LL_ADC_IsActiveFlag_EOS(ADC1)) && (Etat_Conversion == 0)){
 		Tension = *Conversion(0);
 		Etat_Conversion = 1;

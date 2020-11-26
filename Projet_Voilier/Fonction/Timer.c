@@ -29,7 +29,7 @@ void Timer_Conf(void)
 	My_LL_Tim_Init_Struct.RepetitionCounter=0;
 	LL_TIM_Init(TIM1,&My_LL_Tim_Init_Struct);
 			//Conf du CCR1
-	LL_TIM_OC_SetCompareCH1(TIM1, 720);
+	LL_TIM_OC_SetCompareCH1(TIM1, 1110);
 	LL_TIM_CC_EnableChannel(TIM1, LL_TIM_CHANNEL_CH1);
 			//Mode PWM1
 	LL_TIM_OC_SetMode(TIM1, LL_TIM_CHANNEL_CH1, LL_TIM_OCMODE_PWM1);
@@ -52,9 +52,9 @@ void Timer_Conf(void)
 	LL_TIM_OC_SetMode(TIM2, LL_TIM_CHANNEL_CH2, LL_TIM_OCMODE_PWM1);	
 	
 	//TIM3 en mode Encoder Interface
-	LL_TIM_SetEncoderMode(TIM3, LL_TIM_ENCODERMODE_X4_TI12);
+	LL_TIM_SetEncoderMode(TIM3, LL_TIM_ENCODERMODE_X2_TI2);
 			//Conf de l'ARR et du PSC
-	My_LL_Tim_Init_Struct.Autoreload=359;
+	My_LL_Tim_Init_Struct.Autoreload=719;
 	My_LL_Tim_Init_Struct.Prescaler=0;
 	My_LL_Tim_Init_Struct.ClockDivision=LL_TIM_CLOCKDIVISION_DIV1;
 	My_LL_Tim_Init_Struct.CounterMode=LL_TIM_COUNTERMODE_UP;

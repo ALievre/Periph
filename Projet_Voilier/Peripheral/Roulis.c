@@ -7,6 +7,7 @@ int Angle_Limite(int * proulis){
 	int y = *(proulis + 2);
 	
 	static int indicateur = 0; //0 : angle de roulis < 45°
+	static int resultat = 42 ;
 	
 	//Si x = y, alors on a attenit l'angle limite
 	if (x == y){
@@ -14,12 +15,12 @@ int Angle_Limite(int * proulis){
 		//On était < 45°, on passe l'angle limite !
 		if (indicateur == 0){
 			indicateur = 1;
-			return 1;
+			resultat = 1;
 		} else if (indicateur == 1){ //On était > 45° donc on revient aux angles normaux
 			indicateur = 0;
-			return 0;
+				resultat = 0;
 		}
 		
 	}
-
+ return resultat;
 }

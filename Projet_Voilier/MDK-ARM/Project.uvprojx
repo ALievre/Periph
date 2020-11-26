@@ -10,7 +10,7 @@
       <TargetName>NUCLEO-F103RB</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
+      <pCCUsed>5060750::V5.06 update 6 (build 750)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -185,6 +185,7 @@
             <uocXRam>0</uocXRam>
             <RvdsVP>0</RvdsVP>
             <RvdsMve>0</RvdsMve>
+            <RvdsCdeCp>0</RvdsCdeCp>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -338,7 +339,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>STM32F103xB,USE_FULL_LL_DRIVER,HSE_VALUE=8000000U,USE_FULL_ASSERT</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Inc;..\LLDrivers\inc;..\Services;..\MyDrivers</IncludePath>
+              <IncludePath>..\Inc;..\LLDrivers\inc;..\Services;..\MyDrivers;..\Peripheral;..\Fonction;..\Application</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -351,7 +352,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <uClangAs>0</uClangAs>
+            <ClangAsOpt>4</ClangAsOpt>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -533,7 +534,7 @@
       <TargetName>Simulateur</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
+      <pCCUsed>5060750::V5.06 update 6 (build 750)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -708,6 +709,7 @@
             <uocXRam>0</uocXRam>
             <RvdsVP>0</RvdsVP>
             <RvdsMve>0</RvdsMve>
+            <RvdsCdeCp>0</RvdsCdeCp>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -874,7 +876,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <uClangAs>0</uClangAs>
+            <ClangAsOpt>4</ClangAsOpt>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -1067,5 +1069,20 @@
     </components>
     <files/>
   </RTE>
+
+  <LayerInfo>
+    <Layers>
+      <Layer>
+        <LayName>&lt;Project Info&gt;</LayName>
+        <LayDesc></LayDesc>
+        <LayUrl></LayUrl>
+        <LayKeys></LayKeys>
+        <LayCat></LayCat>
+        <LayLic></LayLic>
+        <LayTarg>0</LayTarg>
+        <LayPrjMark>1</LayPrjMark>
+      </Layer>
+    </Layers>
+  </LayerInfo>
 
 </Project>

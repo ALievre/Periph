@@ -45,17 +45,17 @@ int * Conversion(int num_channel){
 	int * ptab = tab;
 	
     if (num_channel==0){
-        LL_ADC_REG_SetSequencerRanks(ADC1,LL_ADC_REG_RANK_1,LL_ADC_CHANNEL_0);
+        LL_ADC_REG_SetSequencerRanks(ADC1,LL_ADC_REG_RANK_1,LL_ADC_CHANNEL_10);
 				Conversion_Start();
 				tab[0] = LL_ADC_REG_ReadConversionData12(ADC1);
     }
     else if (num_channel==1){
-					LL_ADC_REG_SetSequencerRanks(ADC1,LL_ADC_REG_RANK_1,LL_ADC_CHANNEL_1);
+					LL_ADC_REG_SetSequencerRanks(ADC1,LL_ADC_REG_RANK_1,LL_ADC_CHANNEL_11);
 					Conversion_Start();
 					tab[1] = LL_ADC_REG_ReadConversionData12(ADC1);
 		}
 		else if (num_channel==2){
-				LL_ADC_REG_SetSequencerRanks(ADC1,LL_ADC_REG_RANK_1,LL_ADC_CHANNEL_2);
+				LL_ADC_REG_SetSequencerRanks(ADC1,LL_ADC_REG_RANK_1,LL_ADC_CHANNEL_12);
 				Conversion_Start();
 				tab[2] = LL_ADC_REG_ReadConversionData12(ADC1);
 		}
