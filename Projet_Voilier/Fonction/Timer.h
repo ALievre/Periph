@@ -1,3 +1,5 @@
+#ifndef Timer_h
+#define Timer_h
 #include "stm32f103xb.h" 
 
 /**
@@ -13,3 +15,5 @@ void Timer_Conf(void);
 void Timer_Start(TIM_TypeDef * Timer);
 
 void Timer_Stop(TIM_TypeDef * Timer);
+
+#endif

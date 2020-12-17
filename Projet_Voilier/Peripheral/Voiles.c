@@ -5,13 +5,15 @@
 int Direction_Voiles(int Angle_Girouette){
 
 	int Angle_Voiles;
+	if (Angle_Girouette > 180)
+		Angle_Girouette = 360- Angle_Girouette ;
 	
-	if ((315 < Angle_Girouette) || (Angle_Girouette < 45)) Angle_Voiles = 0;
-	else if ((Angle_Girouette >= 45) && (Angle_Girouette <180)) Angle_Voiles = 45;
-	else if ((Angle_Girouette > 181) && (Angle_Girouette <= 315)) Angle_Voiles = -45;
-	else if (Angle_Girouette == 181) Angle_Voiles = -89;
-	else if (Angle_Girouette == 180) Angle_Voiles = 90;
-	
+	if (Angle_Girouette < 45) 
+		Angle_Voiles = 0;
+	else 
+		if (Angle_Girouette <180)
+			Angle_Voiles = 45;
+		
 	return Angle_Voiles;
 	
 }
@@ -20,16 +22,17 @@ int Direction_Voiles(int Angle_Girouette){
 void Controle_Servomoteur(int Angle_Voiles, int Angle_Lim){
 	
 	int Angle_Servo, duty_cycle;
-	
+//	Angle_Lim =  0;
 	//Si on est à l'angle limite, on ferme les voiles
-	if (Angle_Lim==1){
+	if (Angle_Lim==1)
 		LL_TIM_OC_SetCompareCH1(TIM1, 1500);
-	} else {
-		if (Angle_Voiles == 0) LL_TIM_OC_SetCompareCH1(TIM1, 1110);
-		else if (Angle_Voiles == 90) LL_TIM_OC_SetCompareCH1(TIM1, 720);
-		else if (Angle_Voiles == -89) LL_TIM_OC_SetCompareCH1(TIM1, 1500);
-		else if (Angle_Voiles == -45) LL_TIM_OC_SetCompareCH1(TIM1, 1305); 
-		else if (Angle_Voiles == 45) LL_TIM_OC_SetCompareCH1(TIM1, 915);
+	else
+	{
+		if (Angle_Voiles == 0) 
+			LL_TIM_OC_SetCompareCH1(TIM1, 1110);
+		else 
+			LL_TIM_OC_SetCompareCH1(TIM1, 915);
+	}
 		/*else{
 			
 			Angle_Servo = 90 - Angle_Voiles;
@@ -37,6 +40,5 @@ void Controle_Servomoteur(int Angle_Voiles, int Angle_Lim){
 			LL_TIM_OC_SetCompareCH1(TIM1, duty_cycle);
 		
 		} 	*/
-	}
-
 }
+

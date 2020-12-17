@@ -28,104 +28,46 @@ Project File Date:  11/26/2020
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'NUCLEO-F103RB'
 compiling Roulis.c...
-..\Peripheral\Roulis.h(1): warning:  #1-D: last line of file ends without a newline
-  int Angle_Limite(int * proulis);
-..\Peripheral\Roulis.c(26): warning:  #1-D: last line of file ends without a newline
-  }
-..\Peripheral\Roulis.c: 2 warnings, 0 errors
 compiling Pupitre.c...
-..\Peripheral\Pupitre.h(1): warning:  #1-D: last line of file ends without a newline
-  void Transmission_Data(int Tension_Batterie, int Angle_Limite, int Angle_Voiles);
-..\Peripheral\Pupitre.c(57): warning:  #1-D: last line of file ends without a newline
-  }
+..\Peripheral\Pupitre.c(25): warning:  #177-D: variable "tab_roulis"  was declared but never referenced
+  	uint8_t tab_roulis[32] = {0x41, 0x6E, 0x67, 0x6C, 0x65, 0x20, 0x6C, 0x69, 0x6D, 0x69, 0x74, 
+..\Peripheral\Pupitre.c(30): warning:  #177-D: variable "tab_voiles"  was declared but never referenced
+  	uint8_t tab_voiles[26] = {0x41, 0x6E, 0x67, 0x6C, 0x65, 0x20, 0x76, 0x6F, 0x69, 0x6C, 0x65,
 ..\Peripheral\Pupitre.c: 2 warnings, 0 errors
+compiling main.c...
 compiling Batterie.c...
-..\Peripheral\Batterie.h(3): warning:  #1-D: last line of file ends without a newline
-  int Seuil_Batterie(int * ptension);
 ..\Peripheral\Batterie.c(12): warning:  #940-D: missing return statement at end of non-void function "Seuil_Batterie" 
   }
-..\Peripheral\Batterie.c: 2 warnings, 0 errors
-compiling Voilier.c...
-..\Fonction\ADC.h(8): warning:  #1-D: last line of file ends without a newline
-  void ADC_Stop(void);
-..\Fonction\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
-  void GPIO_Conf(void);
-..\Fonction\Timer.h(15): warning:  #1-D: last line of file ends without a newline
-  void Timer_Stop(TIM_TypeDef * Timer);
-..\Fonction\UART.h(3): warning:  #1-D: last line of file ends without a newline
-  void USART_Conf(void);
-..\Peripheral\Batterie.h(3): warning:  #1-D: last line of file ends without a newline
-  int Seuil_Batterie(int * ptension);
-..\Peripheral\Plateau.h(1): warning:  #1-D: last line of file ends without a newline
-  void Controle_Moteur_cc(float Direction);
-..\Peripheral\Pupitre.h(1): warning:  #1-D: last line of file ends without a newline
-  void Transmission_Data(int Tension_Batterie, int Angle_Limite, int Angle_Voiles);
-..\Peripheral\Roulis.h(1): warning:  #1-D: last line of file ends without a newline
-  int Angle_Limite(int * proulis);
-..\Peripheral\Vent.h(5): warning:  #1-D: last line of file ends without a newline
-  int Direction_Vent(void);
-..\Peripheral\Voiles.h(5): warning:  #1-D: last line of file ends without a newline
-  void Controle_Servomoteur(int Angle_Servo, int Angle_Limite);
-../Services/Voilier.c(65): warning:  #1-D: last line of file ends without a newline
-  }
-../Services/Voilier.c: 11 warnings, 0 errors
-compiling main.c...
+..\Peripheral\Batterie.c: 1 warning, 0 errors
 compiling Voiles.c...
-..\Peripheral\Voiles.h(5): warning:  #1-D: last line of file ends without a newline
-  void Controle_Servomoteur(int Angle_Servo, int Angle_Limite);
-..\Peripheral\Voiles.c(42): warning:  #1-D: last line of file ends without a newline
-  }
-..\Peripheral\Voiles.c(22): warning:  #177-D: variable "Angle_Servo"  was declared but never referenced
+..\Peripheral\Voiles.c(24): warning:  #177-D: variable "Angle_Servo"  was declared but never referenced
   	int Angle_Servo, duty_cycle;
-..\Peripheral\Voiles.c(22): warning:  #177-D: variable "duty_cycle"  was declared but never referenced
+..\Peripheral\Voiles.c(24): warning:  #177-D: variable "duty_cycle"  was declared but never referenced
   	int Angle_Servo, duty_cycle;
-..\Peripheral\Voiles.c: 4 warnings, 0 errors
-compiling Vent.c...
-..\Peripheral\Vent.h(5): warning:  #1-D: last line of file ends without a newline
-  int Direction_Vent(void);
-..\Peripheral\Vent.c(19): warning:  #1-D: last line of file ends without a newline
-  }
-..\Peripheral\Vent.c: 2 warnings, 0 errors
+..\Peripheral\Voiles.c: 2 warnings, 0 errors
 compiling Plateau.c...
-..\Peripheral\Plateau.h(1): warning:  #1-D: last line of file ends without a newline
-  void Controle_Moteur_cc(float Direction);
-..\Peripheral\Plateau.c(30): warning:  #1-D: last line of file ends without a newline
-  }
-..\Peripheral\Plateau.c: 2 warnings, 0 errors
+..\Peripheral\Plateau.c(8): warning:  #550-D: variable "Vitesse"  was set but never used
+  	float Vitesse, Direction_Gauche;
+..\Peripheral\Plateau.c: 1 warning, 0 errors
+compiling Vent.c...
+compiling Voilier.c...
+compiling GPIO.c...
 compiling Telecommande.c...
 compiling stm32f1xx_ll_rcc.c...
-compiling GPIO.c...
-..\Fonction\GPIO.h(3): warning:  #1-D: last line of file ends without a newline
-  void GPIO_Conf(void);
-..\Fonction\GPIO.c(50): warning:  #1-D: last line of file ends without a newline
-  }
-..\Fonction\GPIO.c: 2 warnings, 0 errors
-compiling stm32f1xx_ll_utils.c...
 compiling UART.c...
-..\Fonction\UART.h(3): warning:  #1-D: last line of file ends without a newline
-  void USART_Conf(void);
-..\Fonction\UART.c(35): warning:  #1-D: last line of file ends without a newline
-  }
-..\Fonction\UART.c: 2 warnings, 0 errors
-assembling startup_stm32f103xb.s...
+compiling stm32f1xx_ll_utils.c...
 compiling Timer.c...
-..\Fonction\Timer.h(15): warning:  #1-D: last line of file ends without a newline
-  void Timer_Stop(TIM_TypeDef * Timer);
 ..\Fonction\Timer.c(15): warning:  #177-D: variable "My_TIM_BDTRInitStruct"  was declared but never referenced
   	LL_TIM_BDTR_InitTypeDef My_TIM_BDTRInitStruct;
-..\Fonction\Timer.c(104): warning:  #1-D: last line of file ends without a newline
-  }
-..\Fonction\Timer.c: 3 warnings, 0 errors
+..\Fonction\Timer.c: 1 warning, 0 errors
+assembling startup_stm32f103xb.s...
 compiling ADC.c...
-..\Fonction\ADC.h(8): warning:  #1-D: last line of file ends without a newline
-  void ADC_Stop(void);
-..\Fonction\ADC.c: 1 warning, 0 errors
 compiling system_stm32f1xx.c...
-compiling stm32f1xx_ll_tim.c...
 compiling stm32f1xx_ll_usart.c...
+compiling stm32f1xx_ll_tim.c...
 linking...
-Program Size: Code=6082 RO-data=330 RW-data=12 ZI-data=1036  
-"NUCLEO-F103RB\NUCLEO-F103RB.axf" - 0 Error(s), 33 Warning(s).
+Program Size: Code=5978 RO-data=330 RW-data=12 ZI-data=1036  
+"NUCLEO-F103RB\NUCLEO-F103RB.axf" - 0 Error(s), 7 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -148,7 +90,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.4.0
-Build Time Elapsed:  00:00:05
+Build Time Elapsed:  00:00:06
 </pre>
 </body>
 </html>
